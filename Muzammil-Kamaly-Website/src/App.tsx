@@ -70,6 +70,38 @@ function App() {
             <figcaption className="mt-2 text-gray-600 text-sm">Caption for my picture</figcaption>
           </figure>
         </section>
+
+        {activeTab === 'about' && (
+          <section>
+            <h2>About Me</h2>
+            <p>
+              Hello! Muzammil Kamaly. I'm passionate about technology and enjoy
+              building awesome web applications.
+            </p>
+          </section>
+        )}
+
+        {activeTab === 'contact' && (
+          <section>
+            <h2>Contact Me</h2>
+            <p>Contact me at your.email@example.com</p>
+          </section>
+        )}
+
+        {activeTab === 'blog' && (
+          <section>
+            <h2>Blog</h2>
+            {/* Add your blog content here */}
+          </section>
+        )}
+
+        {activeTab === 'books' && (
+          <section>
+            <h2>Books I'm Reading</h2>
+            {/* Add your books content here */}
+          </section>
+        )}
+
       </main>
 
       <footer>
