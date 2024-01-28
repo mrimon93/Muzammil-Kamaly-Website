@@ -1,11 +1,43 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './App.css';
 
 function App() {
+  const [activeTab, setActiveTab] = useState('about'); // Default to the "About Me" tab
+
+  const handleTabClick = (tabName: string) => {
+    setActiveTab(tabName);
+  };
+
   return (
     <div className="app">
+      <nav className="tabs">
+        <button
+          className={activeTab === 'about' ? 'active' : ''}
+          onClick={() => handleTabClick('about')}
+        >
+          About Me
+        </button>
+        <button
+          className={activeTab === 'contact' ? 'active' : ''}
+          onClick={() => handleTabClick('contact')}
+        >
+          Contact Me
+        </button>
+        <button
+          className={activeTab === 'blog' ? 'active' : ''}
+          onClick={() => handleTabClick('blog')}
+        >
+          Blog
+        </button>
+        <button
+          className={activeTab === 'books' ? 'active' : ''}
+          onClick={() => handleTabClick('books')}
+        >
+          Books
+        </button>
+      </nav>
       <header>
-        <h1>YMuzammil Kamaly</h1>
+        <h1>Muzammil Kamaly</h1>
         <p>Welcome to My Personal Website</p>
       </header>
 
