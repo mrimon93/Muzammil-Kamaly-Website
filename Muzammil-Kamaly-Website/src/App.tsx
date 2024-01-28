@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import './App.css';
 
 function App() {
-  const [activeTab, setActiveTab] = useState('about'); // Default to the "About Me" tab
+  const [activeTab, setActiveTab] = useState('about'); 
 
   const handleTabClick = (tabName: string) => {
     setActiveTab(tabName);
